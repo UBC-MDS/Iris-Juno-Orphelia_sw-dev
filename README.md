@@ -15,9 +15,10 @@ For this project we would like to re-implement Python’s melt(), pivot() and dr
 
 - `my_dropna()` : Remove NAs from a dataframe.
 
+To test our functions, our package will include an additonal function that creates a small dataframe with two columns. 
+
 Our functions were inspired from the following functions that exist in the Pandas ecosystem:
 - [`pandas.melt`](http://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.melt.html)
 - [`pandas.DataFrame.pivot`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.pivot.html)
 - [`pandas.DataFrame.dropna`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dropna.html)
 
-To test our functions, our package will include an additonal function that creates a small dataframe with two columns. 
