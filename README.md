@@ -1,3 +1,5 @@
+# Mini Tidy Package for Python
+
 ### Contributors:
 - Orphelia Ellogne (`ellognea`)
 - Huijue Chen (`huijuechen`)
