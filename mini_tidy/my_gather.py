@@ -4,7 +4,7 @@
 import pandas as pd
 
 # function
-def my_gather(df, keys, valuename = 'value'):
+def my_gather(df, keyname = 'key', valuename = 'value', keys):
     '''
     Make dataframe from wide to long by combining columns
     For the selected columns, put the column names into a new column 'keys'
@@ -12,8 +12,9 @@ def my_gather(df, keys, valuename = 'value'):
 
     Args:
         df (dataframe): a pandas dataframe to be transformed
-        keys (list of strings): columns names to be put in the 'key' column
+        keyname (string): name for the new 'key' column
         valuename (string): name for the new 'value' column
+        keys (list of strings): columns names to be put in the 'key' column
 
     Returns:
         new_df (dataframe): the transformed new dataframe
