@@ -1,4 +1,7 @@
-# documentation
+# This is a test for the function my_spread
+# It creates dataframe to test the function
+# and checks if they meet the requirements
+# It includes four test functions in total
 
 # import packages
 import pandas as pd
