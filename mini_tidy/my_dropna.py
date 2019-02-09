@@ -6,7 +6,7 @@
 import pandas as pd
 
 # function
-def my_spread(df, key, value):
+def my_dropna(df, key, value):
     '''
         If the input is dataframe, check through the dataframe and remove the rows with NA values.
 

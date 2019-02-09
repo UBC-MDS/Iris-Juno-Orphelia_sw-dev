@@ -1,4 +1,5 @@
-# documentation
+# This is the script for function my_spread
+# Function left black at this point for further contributions
 
 # import packages
 import pandas as pd
