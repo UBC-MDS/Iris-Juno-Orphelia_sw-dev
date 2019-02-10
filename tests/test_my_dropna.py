@@ -25,11 +25,10 @@ output_df = pd.DataFrame(data = s2)
 def test_my_dropna_normal():
     '''Test with normal inputs'''
 
-    # gather two columns
     d1_test = my_dropna(input_df)
     assert d1_test.equals(output_df), "normal dataframe, rows with NAs removed"
 
-def test_my_gather_wrong_input():
+def test_my_dropna_wrong_input():
     '''When the type of input data is not dataframe, should return None'''
 
     # input is not a dataframe, should return None and display error message
