@@ -1,7 +1,7 @@
 
 # Feb 2019
 # This script contains tests for the my_dropna function
-# The function creates a new dataframe by removing the rows with NA values in the original dataframe
+# The function creates a new dataframe by removing the rows with "NaN" values in the original dataframe
 # input: dataframe
 # output: dataframe
 #------------------------------------
@@ -13,23 +13,21 @@ import pytest
 # create dataframes for testing
 
 # test input
-s1 = {'A': [25, 15, 30, NA], 'B': [0, 1, NA, 1], 'C': ["Yes", "No", "Yes", "No"]}
-input_df = pd.DataFrame(data = s1)
+s1 = pd.DataFrame({"A":[25,15,None,30], "y": [0,1,0, None], "z": ["Yes", "No", "Yes", "No"]})
 
 # test output
-s2 = {'A': [25, 15], 'B': [0, 1], 'C': ["Yes", "No"]}
-output_df = pd.DataFrame(data = s2)
+s2 = pd.DataFrame({"A":[25,15], "y": [0,1], "z": ["Yes", "No"]})
 
 # Testing methods
 
 def test_my_dropna_normal():
-    '''Test with normal inputs'''
+    '''Test normal dataframe'''
 
     d1_test = my_dropna(input_df)
     assert d1_test.equals(output_df), "normal dataframe, rows with NAs removed"
 
 def test_my_dropna_wrong_input():
-    '''When the type of input data is not dataframe, should return None'''
+    '''When the input data is not a dataframe, return error message'''
 
     # input is not a dataframe, should return None and display error message
     d7_test = my_dropna([1,2,3])

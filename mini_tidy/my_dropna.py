@@ -1,19 +1,19 @@
 # February 2019
-# this script tests the function for my_dropna.py
-# this function removes the rows in a datafram that containing "NA"
-
+# This script defines the function my_dropna.py
+# The function creates a new dataframe by removing the rows with "NaN" values in the original dataframe
+#------------------------------------
 # Required packages
 import pandas as pd
-
-# function
+#------------------------------------
+# Define function
 def my_dropna(df, key, value):
     '''
-        If the input is dataframe, check through the dataframe and remove the rows with NA values.
+        If the input is dataframe, check through the dataframe and remove the rows with NaN values.
 
         Parameters
         ----------
         param1 : dataframe
-            A dataframe to remove the rows with NA values.
+            A dataframe to remove the rows with NaN values.
 
         Returns
         -------
