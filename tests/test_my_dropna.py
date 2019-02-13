@@ -13,10 +13,10 @@ import pytest
 # create dataframes for testing
 
 # test input
-s1 = pd.DataFrame({"A":[25,15,None,30], "y": [0,1,0, None], "z": ["Yes", "No", "Yes", "No"]})
+input_df = pd.DataFrame({"A":[25,15,None,30], "y": [0,1,0, None], "z": ["Yes", "No", "Yes", "No"]})
 
 # test output
-s2 = pd.DataFrame({"A":[25,15], "y": [0,1], "z": ["Yes", "No"]})
+output_df = input_df.dropna()
 
 # Testing methods
 
