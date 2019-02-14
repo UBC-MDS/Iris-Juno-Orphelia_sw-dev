@@ -20,3 +20,22 @@ def my_dropna(df, key, value):
         Dataframe
         The output will be a dataframe with the entire rows with NA values removed from the input dataframe.
     '''
+    if not isinstance(X, pd.DataFrame):
+        raise TypeError("Expect input to be a dataframe")
+
+    # Define a function to check if input is NA value
+    def isNaN(num):
+        return num != num
+
+    rows = X.shape[0]
+    columns = X.shape[1]
+    Y=X
+
+    for i in range(0, rows):
+        na_count=0
+        for k in range(0,columns):
+            if isNaN(X.iloc[i,k]):
+                na_count += 1
+        if na_count>0:
+            Y = Y.drop(i)
+    return Y
