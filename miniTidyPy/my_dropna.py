@@ -6,7 +6,7 @@
 import pandas as pd
 #------------------------------------
 # Define function
-def my_dropna(df, key, value):
+def my_dropna(X):
     '''
         If the input is dataframe, check through the dataframe and remove the rows with NaN values.
 

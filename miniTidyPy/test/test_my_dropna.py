@@ -5,30 +5,31 @@
 # input: dataframe
 # output: dataframe
 #------------------------------------
+# Import our functions
+import os
+import sys
+sys.path.insert(0, os.path.abspath("../../miniTidyPy"))
+import miniTidyPy
+#------------------------------------
 # Required packages
 import pandas as pd
 import pytest
 #------------------------------------
-
-# create dataframes for testing
-
+# Create dataframes for testing
 # test input
 input_df = pd.DataFrame({"A":[25,15,None,30], "y": [0,1,0, None], "z": ["Yes", "No", "Yes", "No"]})
-
 # test output
 output_df = input_df.dropna()
-
-# Testing methods
+#------------------------------------
+# Testing Functions
 
 def test_my_dropna_normal():
     '''Test normal dataframe'''
-
-    d1_test = my_dropna(input_df)
+    d1_test = miniTidyPy.my_dropna(input_df)
     assert d1_test.equals(output_df), "normal dataframe, rows with NAs removed"
 
 def test_my_dropna_wrong_input():
     '''When the input data is not a dataframe, return error message'''
-
     # input is not a dataframe, should return None and display error message
-    d7_test = my_dropna([1,2,3])
-    assert d7_test is None, "Error: Expect input to be a dataframe"
+    with pytest.raises(TypeError):
+            miniTidyPy.my_dropna([1,2,3])
