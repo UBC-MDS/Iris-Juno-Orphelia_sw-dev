@@ -78,4 +78,5 @@ def test_my_spread_na():
     assert d0_test.equals(output_na), "key column contains NaN"
 
     # when the whole dataframe contains NaN
-    assert miniTidyPy.my_spread(all_na, key = 'a', value = 'b').equals(pd.DataFrame({}))
+    with pytest.raises(ValueError):
+        miniTidyPy.my_spread(all_na, key = 'a', value = 'b')

@@ -1,5 +1,4 @@
 # This is the script for function my_spread
-# Function left black at this point for further contributions
 
 # import packages
 import pandas as pd
@@ -51,6 +50,17 @@ def my_spread(df, key, value):
     # add key columns and value to the end
     for keyname in keys:
         struc[keyname] = []
+        
+    # check if the preserved columns and the key columns form unique identifiers
+    check_id = []
+    for i in range(df.shape[0]):
+        idf = ""
+        for col in preserved:  # add preserved column value to the string
+            idf = idf + str(df[col][i]) + " "
+        idf = idf + str(df[key][i]) # add key column value to the string
+        check_id.append(idf)
+    if len(check_id) != len(set(check_id)):
+        raise ValueError('Dataframe without unique identifiers')
 
     # turn the values in the preserved columns into a list of strings
     pre_combos = []
@@ -82,4 +92,4 @@ def my_spread(df, key, value):
         for colname in list(struc):
             struc[colname].append(combo_dic[c][colname])
 
-    return pd.DataFrame(struc)
+    return pd.DataFrame(struc) 
