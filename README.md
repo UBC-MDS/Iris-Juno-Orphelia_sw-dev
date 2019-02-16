@@ -24,7 +24,7 @@ Our functions were inspired from the following functions that exist in the Panda
 
 ### Installation
 
-CorrPy can be installed with pip from Github using:
+`miniTidyPy` can be installed with pip from Github using:
 - `pip install git+https://github.com/UBC-MDS/mini_tidy_python.git`
 
 ### Important files(in update)
