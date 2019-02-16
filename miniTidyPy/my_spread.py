@@ -46,10 +46,6 @@ def my_spread(df, key, value):
         if col != key and col != value: # the preserved columns
             struc[col] = []
             preserved.append(col)
-            
-    # if no preserved columns, raise an error
-    if len(preserved) == 0:
-        raise ValueError('Dataframe without unique identifiers')
 
     # add key columns and value to the end
     for keyname in keys:
