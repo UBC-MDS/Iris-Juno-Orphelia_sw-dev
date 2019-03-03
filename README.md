@@ -35,6 +35,8 @@ We would use the below dataset as an example and apply the 3 functions above ste
 After applying `my_dropna` to remove the rows containing `NA` values, we get below:
 
 ```
+import pandas as pd
+import miniTidyPy as mt
 dropna_df = mt.my_dropna(sample_df)
 dropna_df
 ```
