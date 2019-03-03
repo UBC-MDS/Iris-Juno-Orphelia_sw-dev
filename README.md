@@ -15,7 +15,7 @@ For this project we would like to re-implement Python’s melt(), pivot() and dr
 
 - `my_dropna()` :Remove the entire rows that containing `NA` values from a dataframe.
 
-To test our functions, our package will include an additonal function that creates a small dataframe with two columns. 
+To test our functions, our package will include an additonal function that creates a small dataframe with two columns.
 
 Our functions were inspired from the following functions that exist in the Pandas ecosystem:
 - [`pandas.melt`](http://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.melt.html)
@@ -26,6 +26,17 @@ Our functions were inspired from the following functions that exist in the Panda
 
 `miniTidyPy` can be installed with pip from Github using:
 - `pip install git+https://github.com/UBC-MDS/mini_tidy_python.git`
+
+### Branch coverage
+
+To test branch coverage, we use [coverage.py](https://coverage.readthedocs.io/en/coverage-4.2/index.html#). It can be installed with `pip install coverage`.
+
+We run below on a local directory of the package repo to obtain the coverage [result]:
+- `coverage run -m --branch pytest -q miniTidyPy/test/test_my_dropna.py miniTidyPy/test/test_my_gather.py miniTidyPy/test/test_my_spread.py`
+
+```
+
+```
 
 ### Important files(in update)
 * README.md
