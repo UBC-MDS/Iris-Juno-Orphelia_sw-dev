@@ -22,9 +22,22 @@ Our functions were inspired from the following functions that exist in the Panda
 - [`pandas.DataFrame.pivot`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.pivot.html)
 - [`pandas.DataFrame.dropna`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dropna.html)
 
+### Installation
+
+`miniTidyPy` can be installed with pip from Github using:
+- `pip install git+https://github.com/UBC-MDS/mini_tidy_python.git`
+
 ### Example Usage
 
 We would use the below dataset as an example and apply the 3 functions above step by step. Also the complete working file with this dataset can be found [here](doc/ToyDataExampleUsage.ipynb).
+
+```
+import pandas as pd
+import miniTidyPy as mt
+
+sample_df = pd.DataFrame({'city': ['Vancouver', 'Burnaby', 'Richmond'], 'morning': [12, 20, 15], 'evening': [5, 8 ,3], 'midnight' : [-1,2, None]})
+sample_df
+```
 
 | city | morning	 | evening| midnight|
 |---|---|--|--|
@@ -35,8 +48,6 @@ We would use the below dataset as an example and apply the 3 functions above ste
 After applying `my_dropna` to remove the rows containing `NA` values, we get below:
 
 ```
-import pandas as pd
-import miniTidyPy as mt
 dropna_df = mt.my_dropna(sample_df)
 dropna_df
 ```
@@ -99,11 +110,6 @@ miniTidyPy/test/test_my_spread.py      34      0      0      0   100%
 -------------------------------------------------------------------------------
 TOTAL                                 202      0     70      0   100%
 ```
-
-### Installation
-
-`miniTidyPy` can be installed with pip from Github using:
-- `pip install git+https://github.com/UBC-MDS/mini_tidy_python.git`
 
 ### Important files(in update)
 * README.md
