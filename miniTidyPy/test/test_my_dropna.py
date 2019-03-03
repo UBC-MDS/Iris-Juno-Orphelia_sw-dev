@@ -17,16 +17,22 @@ import pytest
 #------------------------------------
 # Create dataframes for testing
 # test input
+empty_df = pd.DataFrame()
 input_df = pd.DataFrame({"A":[25,15,None,30], "y": [0,1,0, None], "z": ["Yes", "No", "Yes", "No"]})
 # test output
 output_df = input_df.dropna()
 #------------------------------------
 # Testing Functions
 
+def test_my_dropna_empty():
+    '''Test empty dataframe'''
+    d1_test = miniTidyPy.my_dropna(empty_df)
+    assert d1_test.equals(empty_df), "empty dataframe, output with empty dataframe"
+
 def test_my_dropna_normal():
     '''Test normal dataframe'''
-    d1_test = miniTidyPy.my_dropna(input_df)
-    assert d1_test.equals(output_df), "normal dataframe, rows with NAs removed"
+    d2_test = miniTidyPy.my_dropna(input_df)
+    assert d2_test.equals(output_df), "normal dataframe, rows with NAs removed"
 
 def test_my_dropna_wrong_input():
     '''When the input data is not a dataframe, return error message'''
