@@ -40,7 +40,7 @@ def my_gather(df, keys, keyname = 'key', valuename = 'value'):
         if col not in keys: # the preserved columns
             struc[col] = []
             preserved.append(col)
-        elif col in keys: # the gathered columns
+        else:
             truekeys.append(col)
             if added == False:
                 struc[keyname] = []
