@@ -25,7 +25,7 @@ output_df = input_df.dropna()
 # Testing Functions
 
 def test_my_dropna_empty():
-    '''Test normal dataframe'''
+    '''Test empty dataframe'''
     d1_test = miniTidyPy.my_dropna(empty_df)
     assert d1_test.equals(empty_df), "empty dataframe, output with empty dataframe"
 
