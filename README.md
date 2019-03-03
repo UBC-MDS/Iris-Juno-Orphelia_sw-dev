@@ -72,12 +72,11 @@ spread_df
 | Vancouver | 12 |5|-1.0|
 | Burnaby | 20 |8|2.0|
 
-### Installation
+### Control Flow Diagram
 
-`miniTidyPy` can be installed with pip from Github using:
-- `pip install git+https://github.com/UBC-MDS/mini_tidy_python.git`
+The control flow diagrams can be found in the links if interested: [`my_dropna`](doc/control_flow_my_dropna.png), [`my_gather`](doc/control_flow_my_gather.png), and [`my_spread`](doc/control_flow_my_spread.png).
 
-### Branch coverage
+### Branch Coverage
 
 To test branch coverage, we use [coverage.py](https://coverage.readthedocs.io/en/coverage-4.2/index.html#). It can be installed with `pip install coverage`.
 
@@ -98,6 +97,11 @@ miniTidyPy/test/test_my_spread.py      34      0      0      0   100%
 -------------------------------------------------------------------------------
 TOTAL                                 202      0     70      0   100%
 ```
+
+### Installation
+
+`miniTidyPy` can be installed with pip from Github using:
+- `pip install git+https://github.com/UBC-MDS/mini_tidy_python.git`
 
 ### Important files(in update)
 * README.md
