@@ -93,3 +93,18 @@ def test_my_gather_allna():
 
     d7_test = miniTidyPy.my_gather(all_na, keys = ['a','b'])
     assert d7_test.equals(output_allna), "all NaN values"
+
+def test_my_gather_input_type():
+    '''Test wrong types of input'''
+    
+    # keys is not a list, should raise ValueError
+    with pytest.raises(ValueError):
+        miniTidyPy.my_gather(sample_df, keyname = 'key', valuename = 'value', keys = 'foo')
+        
+    # keyname is not a string, should raise ValueError
+    with pytest.raises(ValueError):
+        miniTidyPy.my_gather(sample_df, keyname = 2, valuename = 'value', keys = ['foo'])
+        
+    # valuename is not a string, should raise ValueError
+    with pytest.raises(ValueError):
+        miniTidyPy.my_gather(sample_df, keyname = 'key', valuename = 2, keys = ['foo'])

@@ -57,13 +57,17 @@ def test_my_spread_normal():
 def test_my_spread_wrong_key():
     '''When the input key is not included, should return the original dataframe'''
 
-    # input is a list
+    # key input is a list
     d2_test = miniTidyPy.my_spread(sample_df, key = [], value = 'value')
     assert d2_test.equals(sample_df), "key is a list"
 
-    # input is an integer
+    # key input is an integer
     d3_test = miniTidyPy.my_spread(sample_df, key = 2, value = 'value')
     assert d3_test.equals(sample_df), "key is an integer"
+
+    # value input is not included
+    d33_test = miniTidyPy.my_spread(sample_df, key = 'time', value = 2)
+    assert d33_test.equals(sample_df), "value not included"
 
 def test_my_spread_wrong_df():
     '''When the input df is not a dataframe, should return None'''
