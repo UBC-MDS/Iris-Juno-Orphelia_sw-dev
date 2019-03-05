@@ -1,10 +1,11 @@
-# This is the script for function my_spread
+# This script defines the function my_spread
 
-# import packages
+# Required packages
+# Note that mypy does not work with python module
 import pandas as pd
 
-# function
-def my_spread(df, key, value):
+# Define function
+def my_spread(df: pd.core.frame.DataFrame, key: str, value: str) -> pd.core.frame.DataFrame:
     '''
     Separate existing columns into multiple columns
     Select one 'key' column whose content will be the names of the new columns
@@ -13,8 +14,8 @@ def my_spread(df, key, value):
 
     Args:
         df (dataframe): a pandas dataframe to be transformed
-        keys (string): column name selected to be the 'key'
-        valuename (string): column name selected to be the 'value'
+        key (string): column name selected to be the 'key'
+        value (string): column name selected to be the 'value'
 
     Returns:
         new_df (dataframe): the transformed new dataframe
@@ -32,11 +33,11 @@ def my_spread(df, key, value):
 
 
     # build a structure for the new dataframe
-    struc = {} # dictionary to build the dataframe
+    struc: dict = {} # dictionary to build the dataframe
     preserved = [] # list containing the column names not selected as keys
 
     # get the unique values in the key column
-    keys = []
+    keys: list = []
     for i in df[key]:
         if i not in keys and not pd.isnull(i):
             keys.append(i)

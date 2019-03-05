@@ -1,10 +1,11 @@
-# This is the script for function my_gather
+# This script defines the function my_gather
 
-# import packages
+# Required packages
+# Note that mypy does not work with python module
 import pandas as pd
 
-# function
-def my_gather(df, keys, keyname = 'key', valuename = 'value'):
+# Define function
+def my_gather(df: pd.core.frame.DataFrame, keys: list, keyname: str = 'key', valuename: str = 'value') -> pd.core.frame.DataFrame:
     '''
     Make dataframe from wide to long by combining columns
     For the selected columns, put the column names into a new column 'keys'
@@ -31,7 +32,7 @@ def my_gather(df, keys, keyname = 'key', valuename = 'value'):
         raise ValueError('Input valuename must be a string')
 
     # build a structure for the new dataframe
-    struc = {} # dictionary to build the dataframe
+    struc: dict = {} # dictionary to build the dataframe
     preserved = [] # list containing the column names not selected as keys
     truekeys = [] # list containing the actual useful column names
 
