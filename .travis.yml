@@ -7,5 +7,5 @@ install:
  - pip install -U pytest
  - pip install pandas
 script:
-- cd miniTidyPy/tests/
+- cd miniTidyPy/test/
 - pytest
