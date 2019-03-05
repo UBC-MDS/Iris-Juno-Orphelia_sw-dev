@@ -4,7 +4,6 @@ python:
 install:
  - pip install git+https://github.com/UBC-MDS/mini_tidy_python.git
  - pip install -U pytest
- - pip install numpy
  - pip install pandas
 script:
 - cd miniTidyPy/tests/
