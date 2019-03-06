@@ -1,4 +1,4 @@
-# Travis for python
+# Travis yml for python build
 language: python
 python:
  - "3.6"
