@@ -7,9 +7,10 @@
 - Huijue Chen (`huijuechen`)
 - Luo Yang (`lyiris22`)
 
+----
 
 ### Summary
-For this project we would like to re-implement Python’s melt(), pivot() and dropna() functions to deepen our understanding of them. Our functions would have similar or simpler features compared to these functions. We will give them the following names, respectively.
+For this project we re-implemented Python’s melt(), pivot() and dropna() functions to deepen our understanding of them. Our functions have similar or simpler features compared to these functions. We give them the following names, respectively.
 
 - `my_gather()` : Transform data frame from wide to long by combining columns. For selected columns, put the columns names into a column of keys, and the values into a column of values.
 
@@ -23,6 +24,8 @@ Our functions were inspired from the following functions that exist in the Panda
 - [`pandas.melt`](http://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.melt.html)
 - [`pandas.DataFrame.pivot`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.pivot.html)
 - [`pandas.DataFrame.dropna`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dropna.html)
+
+----
 
 ### Installation
 
@@ -87,6 +90,14 @@ spread_df
 | Vancouver | 12 |5|-1.0|
 | Burnaby | 20 |8|2.0|
 
+----
+
+### Test output
+
+To test the functions, we run `pytest` and get the output below.
+
+![pytest_output](doc/pytest_result.png)
+
 ### Control Flow Diagram
 
 The control flow diagrams can be found in the links if interested: [`my_dropna`](doc/control_flow_my_dropna.png), [`my_gather`](doc/control_flow_my_gather.png), and [`my_spread`](doc/control_flow_my_spread.png).
@@ -113,9 +124,20 @@ miniTidyPy/test/test_my_spread.py      34      0      0      0   100%
 TOTAL                                 202      0     70      0   100%
 ```
 
-### Important files(in update)
-* README.md
+----
+
+### Dependencies:
+- `pandas`
+
+### Important files
+
+* [Functions](miniTidyPy/):
+  + [`my_dropna`](miniTidyPy/my_dropna.py)
+  + [`my_gather`](miniTidyPy/my_gather.py)
+  + [`my_spread`](miniTidyPy/my_spread.py)
 * [Testing Units Design](miniTidyPy/test/):
   + testing units for `my_dropna`: [test_my_dropna.py](miniTidyPy/test/test_my_dropna.py)
   + testing units for `my_gather`: [test_my_gather.py](miniTidyPy/test/test_my_gather.py)
   + testing units for `my_spread`: [test_my_spread.py](miniTidyPy/test/test_my_spread.py)
+* Example Usage file:
+  + [ToyDataExampleUsage.ipynb](doc/ToyDataExampleUsage.ipynb)
