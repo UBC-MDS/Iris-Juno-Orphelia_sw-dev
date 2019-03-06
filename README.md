@@ -1,5 +1,7 @@
 # Mini Tidy Package for Python - `miniTidyPy`
 
+[![Build Status](https://travis-ci.org/UBC-MDS/mini_tidy_python.svg?branch=master)](https://travis-ci.org/UBC-MDS/mini_tidy_python)
+
 ### Contributors:
 - Orphelia Ellogne (`ellognea`)
 - Huijue Chen (`huijuechen`)
